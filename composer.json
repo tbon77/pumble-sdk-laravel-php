@@ -1,0 +1,46 @@
+{
+    "name": "tedakis/pumble-sdk-php",
+    "description": "PHP SDK for Pumble API with Laravel support",
+    "keywords": ["pumble", "api", "sdk", "laravel", "chat", "messaging"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tedakis",
+            "email": "anonguy@tedakis.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^8.0|^9.0",
+        "mockery/mockery": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tedakis\\PumbleSDK\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tedakis\\PumbleSDK\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tedakis\\PumbleSDK\\PumbleServiceProvider"
+            ],
+            "aliases": {
+                "Pumble": "Tedakis\\PumbleSDK\\Facades\\Pumble"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
